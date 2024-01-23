@@ -90,6 +90,7 @@ def update_item(item_id):
 def get_all_items():
     return {"items": list(items.values())}
 
+
 @app.delete("/item/<string:item_id>")
 def delete_item(item_id):
     try:
@@ -97,6 +98,7 @@ def delete_item(item_id):
         return {"message": "Item deleted"}
     except KeyError:
         abort(404, message="Item not found")
+
 
 @app.delete("/store/<string:store_id>")
 def delete_store(store_id):
