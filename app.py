@@ -88,6 +88,7 @@ def update_item(item_id):
 
 @app.get("/item")
 def get_all_items():
+    # return "Hello, World!"
     return {"items": list(items.values())}
 
 
